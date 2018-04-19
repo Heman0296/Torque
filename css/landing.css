@@ -1,0 +1,37 @@
+body {
+	font-family: Lato;
+	color : white;
+	background: url(../resources/backgroundLandingPage1.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#content {
+	text-align: center;
+	padding-top: 25%;
+	text-shadow: 0 4px 3px rgba(0,0,0,0.4),
+				0 8px 13px rgba(0,0,0,0.1),
+				0 18px 23px rgba(0,0,0,0.1);
+}
+
+hr {
+	width: 80%;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 14vw;
+	z-index: 997;
+}
+
+h4 {
+	font-size: 4.5vw;
+}
+
+.btn {
+	background-color: rgba(123,175,205,0.9);
+}

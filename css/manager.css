@@ -1,0 +1,22 @@
+#customColor {
+	background-color: rgba(123,175,205,0.9);
+}
+
+#floating-button {
+	position: relative;
+	float: left;
+	margin-left: 50%;
+	margin-top: 7%;
+}
+
+#modalHeading1,#modalHeading2 {
+	font-family: Lato;
+	font-weight: 700;
+	padding: 0 .75rem;
+	font-size: 18px;
+}
+
+#footer {
+	text-align: center;
+	padding: 0;
+}

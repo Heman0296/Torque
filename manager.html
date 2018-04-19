@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/manager.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<title></title>
+</head>
+<body>
+
+	<div class="row">
+	
+	    <div class="col s12">
+	     	<ul class="tabs">
+		        <li class="tab col s6"><a class="active" href="#devices">Devices</a></li>
+		        <li class="tab col s6"><a href="#users">Users</a></li>
+	     	</ul>
+	    </div>
+
+	    <div id="devices" class="col s12">
+	    	
+	    	<ul class="collection">
+		        <li class="collection-item"><div>Air Conditioner<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>Washing Machine<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>Cooler<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>Refrigerator<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+      		</ul>
+
+      		<div class="fixed-action-btn" id="floating-button">
+				<a class="btn-floating btn-large pulse modal-trigger" href="#newDeviceModal" id="customColor" data-toggle="tooltip" data-placement="bottom" title="Add new device">
+				<i class="large material-icons" id="plus">+</i>
+				</a>
+			</div>
+
+	    </div>
+
+	    <div id="users" class="col s12">
+	    	
+	    	<ul class="collection">
+		        <li class="collection-item"><div>Swagjeet Gowswami<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>Pammy Malone<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>David Gutka<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+		        <li class="collection-item"><div>Manish Garrix<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+      		</ul>
+
+      		<div class="fixed-action-btn" id="floating-button">
+				<a class="btn-floating btn-large pulse modal-trigger" href="#newUserModal" id="customColor" data-toggle="tooltip" data-placement="bottom" title="Add new user">
+				<i class="large material-icons" id="plus">+</i>
+				</a>
+			</div>
+
+	    </div>
+
+	    <div id="newDeviceModal" class="modal">
+
+			<p id="modalHeading1">Add New Device</p>
+				
+			<div class="row">
+				
+				<form class="col s12">
+					
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" class="validate" id="device-name">
+							<label for="device-name">Device Name</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" class="validate" id="device-address">
+							<label for="device-address">Device Address</label>
+						</div>
+					</div>
+
+					<div class="modal-footer" id="footer">
+	    				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Add</a>
+	    			</div>
+			</div>
+    
+    	</div>
+
+    	<div id="newUserModal" class="modal">
+
+			<p id="modalHeading2">Add New User</p>
+				
+			<div class="row">
+				
+				<form class="col s12">
+					
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" class="validate" id="first-name">
+							<label for="first-name">First Name</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" class="validate" id="last-name">
+							<label for="last-name">Last Name</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<input type="text" class="validate" id="home-address">
+							<label for="home-address">Home Address</label>
+						</div>
+					</div>
+
+					<div class="modal-footer" id="footer">
+	    				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Add</a>
+	    			</div>
+			</div>
+    
+    	</div>
+
+    <script type="text/javascript">
+    	
+    	$(document).ready(function(){
+    	$('.tabs').tabs();
+    	});
+
+    	$(document).ready(function(){
+    	$('.fixed-action-btn').floatingActionButton();
+    	});
+
+    	$(document).ready(function(){
+    	$('.modal').modal();
+    	});
+
+    </script>
+
+</body>
+</html>

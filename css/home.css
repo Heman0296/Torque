@@ -1,0 +1,67 @@
+body {
+	font-family: Lato;
+}
+
+#modalHeading {
+	font-family: Lato;
+	font-weight: 700;
+	padding: 0 .75rem;
+	font-size: 18px;
+}
+
+#header {
+	margin-top: 5%;
+	color: #2874A6;
+	background-color: rgba(238,110,115,0.4);
+}
+
+#no-content {
+	margin: 2px;
+}
+
+#list {
+	width: 90%;
+	max-width: 1280px;
+	position: relative;
+	float: center;
+	margin: 0 auto;
+	box-sizing: inherit;
+	display: block;
+}
+
+#footer {
+	text-align: center;
+	padding: 0;
+}
+
+.input-field {
+	margin-bottom: 0;
+}
+
+.heading {
+	font-weight: 700;
+	font-size: 10vw;
+}
+
+.sub-heading {
+	font-size: 4vw;
+}
+
+hr {
+	border-top: 1px solid rgba(123,175,205,1);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#customColor {
+	background-color: rgba(123,175,205,0.9);
+}
+
+#lbm-address,#smart-contract-address,#home-name {
+	margin: 0;
+}
+
+#floating-button {
+	position: fixed;
+	margin-right: 1%;
+	margin-bottom: 1%;
+}

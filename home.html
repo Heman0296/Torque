@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
+	<script type="text/javascript" src="./js/web3instance.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./js/home.js"></script>
+	<title>Torque</title>
+</head>
+<body>
+
+	<div class="container" id="header">
+		
+		<div class="row">
+			
+			<div class="col s12">
+				
+				<div id="content">
+					
+					<h1 class="heading">Hello, there!</h1>
+					<hr>
+					<h4 class="sub-heading">Select any of the existing homes or add a new one to see the list of your devices.</h4>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="collection" id="list">
+		
+    </div>
+
+    <div class="fixed-action-btn" id="floating-button">
+		<a class="btn-floating btn-large pulse modal-trigger" href="#newHomeModal" id="customColor" data-toggle="tooltip" data-placement="bottom" title="Add new home agent">
+			<i class="large material-icons" id="plus">+</i>
+		</a>
+	</div>
+
+	<div id="newHomeModal" class="modal">
+
+		<p id="modalHeading">Add New Home</p>
+			
+		<div class="row">
+			
+			<form class="col s12" id="newHomeForm">
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="home-name" name="home-name">
+						<label for="home-name">Home Name</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="lbm-address" name="lbm-address">
+						<label for="lbm-address">LBM Address</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="smart-contract-address" name="smart-contract-address">
+						<label for="smart-contract-address">Smart Contract Address</label>
+					</div>
+				</div>
+
+			</form>
+
+		</div>	
+
+		<div class="modal-footer" id="footer">
+    		<button type="submit" id="btn-submit-form" form="newHomeForm" class="modal-action modal-submit waves-effect waves-green btn-flat teal">Add</button>
+    	</div>	
+	</div>
+
+</body>
+</html>
+
