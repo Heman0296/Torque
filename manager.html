@@ -3,12 +3,12 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/manager.css">
-	<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./js/manager.js"></script>
 	<title></title>
 </head>
 <body>
@@ -24,11 +24,8 @@
 
 	    <div id="devices" class="col s12">
 	    	
-	    	<ul class="collection">
-		        <li class="collection-item"><div>Air Conditioner<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>Washing Machine<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>Cooler<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>Refrigerator<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+	    	<ul class="collection" id="devicesList">
+		        
       		</ul>
 
       		<div class="fixed-action-btn" id="floating-button">
@@ -41,11 +38,8 @@
 
 	    <div id="users" class="col s12">
 	    	
-	    	<ul class="collection">
-		        <li class="collection-item"><div>Swagjeet Gowswami<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>Pammy Malone<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>David Gutka<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
-		        <li class="collection-item"><div>Manish Garrix<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+	    	<ul class="collection" id="userList">
+		        
       		</ul>
 
       		<div class="fixed-action-btn" id="floating-button">
@@ -62,26 +56,29 @@
 				
 			<div class="row">
 				
-				<form class="col s12">
+				<form class="col s12" id="newDeviceForm">
 					
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" id="device-name">
+							<input type="text" class="validate" id="device-name" name="device-name">
 							<label for="device-name">Device Name</label>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" id="device-address">
+							<input type="text" class="validate" id="device-address" name="device-address">
 							<label for="device-address">Device Address</label>
 						</div>
 					</div>
 
-					<div class="modal-footer" id="footer">
-	    				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Add</a>
-	    			</div>
+				</form>
 			</div>
+
+			<div class="modal-footer" id="footer">
+			<button type="submit" form="newDeviceForm" class="modal-action modal-submit waves-effect waves-green btn-flat teal">Add</button>
+
+		</div>
     
     	</div>
 
@@ -91,33 +88,35 @@
 				
 			<div class="row">
 				
-				<form class="col s12">
+				<form class="col s12" id="newUserForm">
 					
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" id="first-name">
+							<input type="text" class="validate" id="first-name" name="first-name">
 							<label for="first-name">First Name</label>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" id="last-name">
+							<input type="text" class="validate" id="last-name" name="last-name">
 							<label for="last-name">Last Name</label>
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="input-field col s12">
-							<input type="text" class="validate" id="home-address">
+							<input type="text" class="validate" id="home-address" name="home-address">
 							<label for="home-address">Home Address</label>
 						</div>
 					</div>
 
-					<div class="modal-footer" id="footer">
-	    				<a href="#!" class="modal-action modal-close waves-effect waves-green btn">Add</a>
-	    			</div>
+				</form>
 			</div>
+
+			<div class="modal-footer" id="footer">
+   				<button type="submit" form="newUserForm" class="modal-action modal-submit waves-effect waves-green btn-flat teal">Add</button>
+	    	</div>
     
     	</div>
 

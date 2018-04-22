@@ -9,6 +9,21 @@ body {
 	font-size: 18px;
 }
 
+.openUser {
+	position: relative;
+	float: left;
+	width: 80%;
+}
+
+li {
+	height: 40px;
+}
+
+.secondary-content {
+	position: relative;
+	float: right;
+}
+
 #header {
 	margin-top: 5%;
 	color: #2874A6;

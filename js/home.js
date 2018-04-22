@@ -1,16 +1,34 @@
 $(document).ready(function(){
+
 	if(localStorage.getItem("homes") != null){
-		var homesString = localStorage.getItem("homes");
-		var homes = JSON.parse(homesString);
-		for (var i = 0; i < homes.length ; i++) {
-			$('#list').append($('<a>').attr( { class:'collection-item',href:'javascript:void(0)	' } ).append(homes[i]));
+		if(JSON.parse(localStorage.getItem("homes")).length != 0){
+			var homesString = localStorage.getItem("homes");
+			var homes = JSON.parse(homesString);
+			for (var i = 0; i < homes.length ; i++) {
+				$("#list").append('<li class="collection-item"><div value="' + homes[i] + '"><div class="openUser" value="' + homes[i] + '">' + homes[i] + '</div><a href="#!" class="secondary-content"><i class="material-icons deleteUser">send</i></a></div></li>');
+			}
 		}
-	}
-	else{
+		else{
+			$("#list").append($('<p>').attr('id','no-content').append('You have not added any homes yet. Please click the add button to add a new home and view your devices.</p>'));	
+		}
+	}else {
 		$("#list").append($('<p>').attr('id','no-content').append('You have not added any homes yet. Please click the add button to add a new home and view your devices.</p>'));	
 	}
-	$("#list").click(function () {
-    	console.log($(this).text());
+	
+	$("i.deleteUser").on('click', function() {
+		var userName = $(this).parent().parent()[0].getAttribute('value');
+		var homesString = localStorage.getItem("homes");
+		var homes = JSON.parse(homesString);
+		var index = homes.indexOf(userName);
+		homes.splice(index,1);
+		localStorage.setItem("homes",JSON.stringify(homes));
+		localStorage.removeItem(userName);
+		window.location.reload();
+	});
+
+	$("div.openUser").on('click', function() {
+		var userName = $(this)[0].getAttribute('value');
+		
 	});
 });
 

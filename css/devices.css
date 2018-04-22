@@ -3,12 +3,20 @@
 }
 
 .card-content {
-	text-align: center;
+	height: 55px;
+}
+
+.card .card-content {
+	padding: 10px 15px 10px 8px;
 }
 
 .switch {
-	position: relative;
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	padding-top: 25px;
+	padding-right: 11px;
 }
 
 .row {
@@ -16,16 +24,34 @@
 }
 
 .status {
-	position: relative;
-	float: left;
-	padding-top: 7px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 8px;
 }
 
-#action {
-	padding: 24px 24px;
+.card-action {
+	height: 60px;
+	padding: 0px;
+	margin: 0px;
 	line-height: 0;
 }
 
-.lever {
-	top: 0;
+select {
+	height: 35px;
+	display: block;
+	width: 100px;
+	font-size: 12px;
 }
+
+
+.card-title {
+	position: relative;
+	float: left;
+}
+
+button {
+	position: relative;
+	float: right;
+}
+
