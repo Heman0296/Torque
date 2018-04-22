@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/renter.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	<script type="text/javascript" src="./js/renter.js"></script>
+	<title>Torque</title>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			
+			<h1 id="heading">Device Rental Form</h1>
+
+			<h5 id="sub-heading">Please fill in our device rental form to express your interest in renting a device.</h5>
+
+		</div>
+
+	</div>
+
+	<div class="myContainer">
+		
+		<div class="row">
+			
+			<form class="col s12" id="rentDeviceForm">
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="device-name" name="device-name">
+						<label for="device-name">Device Name</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="device-address" name="device-address">
+						<label for="device-address">Device Address</label>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="input-field col s6">
+						<input type="text" class="validate" id="duration" name="duration">
+						<label for="duration">Duration (in minutes)</label>
+					</div>
+					<div class="input-field col s6">
+						<input type="text" class="validate" id="amount" name="amount">
+						<label for="amouunt">Amount (in ether)</label>
+					</div>
+				</div>
+
+			</form>
+
+			<div class="row">
+				<button class="btn waves-effect waves-light col s12" id="rentButton">Rent Device</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Disabled container which is only enabled when a evice has been rented -->
+
+	<div class="anotherContainer">
+		
+		<div class="row">
+			<button class="btn waves-effect waves-light disabled col s6" id="turnOn">Turn On</button>
+			<button class="btn waves-effect waves-light disabled col s6" id="turnOff">Turn Off</button>
+		</div>
+
+		<h4>Time Status : </h4>
+
+		<div class="row">
+			<span class="col s6" id="elapsed">Time Elapsed</span>
+			<span class="col s6" id="elapsedTime">04:02:26</span>
+		</div>
+		
+		<div class="row">
+			<span class="col s6" id="remaining">Time Remaining</span>
+			<span class="col s6" id="remainingTime">04:02:26</span>
+		</div>
+
+		<h4>Balance Status : </h4>
+
+		<div class="row">
+			<span class="col s6" id="spent">Balance Spent</span>
+			<span class="col s6" id="spentBalance">5 ether</span>
+		</div>
+		
+		<div class="row">
+			<span class="col s6" id="left">Balance Left</span>
+			<span class="col s6" id="leftBalance">55 ether</span>
+		</div>
+
+		<div class="row">
+			<button class="btn waves-effect waves-light disabled col s12" id="returnRental">Return Rental</button>
+		</div>
+
+	</div>
+
+</body>
+</html>
